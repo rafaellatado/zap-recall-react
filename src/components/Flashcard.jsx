@@ -34,7 +34,7 @@ export default function Flashcard({ qAndA, questionNumber, answeredQuestions, se
 
   if(hasAnswered === true) {
     return (
-      <StyledFour statusDynamicImg={statusDynamicImg}>
+      <StyledFour $statusDynamicImg={statusDynamicImg}>
         <p>Pergunta {questionNumber}</p>
         <img src={statusDynamicImg} alt="" />
       </StyledFour>
@@ -84,11 +84,12 @@ Flashcard.propTypes = {
   answeredQuestions: PropTypes.number.isRequired,
   setAnsweredQuestions: PropTypes.func.isRequired,
   setStatusButtons: PropTypes.func.isRequired,
-  setQAndACardSize: PropTypes.bool.isRequired,
 };
 
 // STYLED COMPONENTS
-const StyledFirst = styled.li`
+const StyledFirst = styled.li.withConfig({
+  shouldForwardProp: (prop) => prop !== 'qAndACardSize', 
+})`
   all: unset;
   display: flex;
   justify-content: space-between;
@@ -211,11 +212,11 @@ const StyledFour = styled.li`
   p {
     text-decoration: line-through;
     color: ${props => {
-      if (props.statusDynamicImg === 'src/assets/icone_erro.png') {
+      if (props.$statusDynamicImg === 'src/assets/icone_erro.png') {
         return 'red';
-      } else if (props.statusDynamicImg === 'src/assets/icone_quase.png') {
+      } else if (props.$statusDynamicImg === 'src/assets/icone_quase.png') {
         return 'yellow';
-      } else if (props.statusDynamicImg === 'src/assets/icone_certo.png') {
+      } else if (props.$statusDynamicImg === 'src/assets/icone_certo.png') {
         return 'green';
   }
     }}

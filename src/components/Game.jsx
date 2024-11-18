@@ -24,7 +24,7 @@ export default function Game({ deck, howManyZaps }) {
         <img src="src/assets/logo.png" alt="" />
         <h1>ZapRecall</h1>
       </StyledTitle>
-      <StyledUl done={done}>
+      <StyledUl $done={done}>
         {randomDeck.map((qAndA, index) => (
           <Flashcard 
             key={index}
@@ -78,5 +78,5 @@ const StyledUl = styled.ul`
   align-items: center;
   width: 100vw;
   gap: 20px;
-  padding-bottom: ${props => (props.done ? '162px' : '80px')};
+  padding-bottom: ${props => (props.$done ? '162px' : '80px')};
 `

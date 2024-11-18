@@ -70,7 +70,6 @@ export default App;
 
 // STYLED COMPONENTS
 const StyledMasterDiv = styled.div`
-  box-sizing: border-box;
   position: absolute;
   top: 20%; 
   left: 50%;
@@ -108,7 +107,9 @@ const StyledInputs = styled.div`
   }
 `
 
-const StyledStartRecall = styled.button`
+const StyledStartRecall = styled.button.withConfig({
+  shouldForwardProp: (prop) => !['whichDeck', 'howManyZaps'].includes(prop),
+})`
   all: unset;
   display: flex;
   align-items: center;
