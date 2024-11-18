@@ -25,7 +25,7 @@ function App() {
       <>
         <GlobalStyles />
           <StyledMasterDiv> 
-            <img src="assets/logo.png" alt="" />
+            <img src="logo.png" alt="" />
 
             <h1>ZapRecall</h1>
 

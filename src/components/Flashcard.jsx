@@ -17,12 +17,12 @@ export default function Flashcard({ qAndA, questionNumber, answeredQuestions, se
       setStatusButtons(prevArr => [...prevArr, whichButton]);
 
       if (whichButton === 'Não lembrei') {
-        setStatusDynamicImg('assets/icone_erro.png')
+        setStatusDynamicImg('icone_erro.png')
       }
       else if( whichButton === 'Quase não lembrei') {
-        setStatusDynamicImg('assets/icone_quase.png')
+        setStatusDynamicImg('icone_quase.png')
       } else {
-        setStatusDynamicImg('assets/icone_certo.png')
+        setStatusDynamicImg('icone_certo.png')
       }
     } 
   }
@@ -212,11 +212,11 @@ const StyledFour = styled.li`
   p {
     text-decoration: line-through;
     color: ${props => {
-      if (props.$statusDynamicImg === 'assets/icone_erro.png') {
+      if (props.$statusDynamicImg === 'icone_erro.png') {
         return 'red';
-      } else if (props.$statusDynamicImg === 'assets/icone_quase.png') {
+      } else if (props.$statusDynamicImg === 'icone_quase.png') {
         return 'yellow';
-      } else if (props.$statusDynamicImg === 'assets/icone_certo.png') {
+      } else if (props.$statusDynamicImg === 'icone_certo.png') {
         return 'green';
   }
     }}

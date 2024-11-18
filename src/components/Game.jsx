@@ -21,7 +21,7 @@ export default function Game({ deck, howManyZaps }) {
   return (
     <>
       <StyledTitle>
-        <img src="assets/logo.png" alt="" />
+        <img src="logo.png" alt="" />
         <h1>ZapRecall</h1>
       </StyledTitle>
       <StyledUl $done={done}>
