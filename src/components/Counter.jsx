@@ -24,7 +24,7 @@ export default function Counter({ howManyZaps, answeredQuestions, statusButtons,
         setFinalMessage('Cada tentativa é um passo mais perto! Continue tentando e logo vai alcançar sua meta!')
       }
     };
-  }, [answeredQuestions, howManyZaps, statusButtons])
+  }, [answeredQuestions, howManyZaps, statusButtons, setDone])
 
   function refreshPage() {
     window.location.reload()
