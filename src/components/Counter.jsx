@@ -33,9 +33,6 @@ export default function Counter({ howManyZaps, answeredQuestions, statusButtons,
   return (
     <StyledCounter>
       {!done && <p>{answeredQuestions}/{howManyZaps} CONCLUÍDOS</p>}
-{/*       <ul>
-        {statusButtonsArray.map((statusImg, index) => <li key={index}><p>{statusImg}</p></li>)}
-      </ul> */}
       <div>
         {done && <p>{finalMessage}</p>}
         {done && <button onClick={refreshPage}>Reiniciar Recall</button>}
