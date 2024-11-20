@@ -1,1 +1,1 @@
-# https://zap-recall-react-navy.vercel.app/
+# https://rafaellatado.github.io/zap-recall-react/
