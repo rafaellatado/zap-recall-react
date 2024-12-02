@@ -8,7 +8,7 @@ export default function Flashcard({ qAndA, questionNumber, answeredQuestions, se
   const [showAnswer, setShowAnswer] = useState(false);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [qAndACardSize, setQAndACardSize] = useState(false);
-  const [statusDynamicImg, setStatusDynamicImg] = useState()
+  const [statusDynamicImg, setStatusDynamicImg] = useState(null);
 
   function handleClick(whichButton) {
     if (!hasAnswered) {
