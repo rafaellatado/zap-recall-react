@@ -1,5 +1,3 @@
-# https://rafaellatado.github.io/zap-recall-react/
-
 # Zap Recall
 
 You can view the Zap Recall App live at <a href="https://rafaellatado.github.io/zap-recall-react/" target="_blank">https://rafaellatado.github.io/zap-recall-react/</a>.
